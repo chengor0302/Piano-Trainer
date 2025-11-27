@@ -44,4 +44,4 @@ The app currently includes features such as:
 
 3. Start the development server:
   ```bash
-npm start
+   npm start
