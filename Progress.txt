@@ -1,0 +1,7 @@
+feachers to add to the app:
+-Create and add flats and sharps images to cloud & app
+-Add personal record and option to save records(Different to each game and to different time limits)
+-Guess notes by sound
+-Guess Chord Game
+-Learning Tools(platform to study principles of piano playing)
+-
