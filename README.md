@@ -39,7 +39,9 @@ The app currently includes features such as:
    git clone https://github.com/yourusername/Piano-Trainer.git
    
 2. Install dependencies:
+   ```bash
    npm install
 
 3. Start the development server:
-  npm start
+  ```bash
+npm start
