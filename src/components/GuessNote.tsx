@@ -53,7 +53,6 @@ const GuessNote: React.FC<Props> = ({ onBack, settings }) => {
         }
     }
       setTimeout(() => setFeedback(null), 1000);
-
   };
 
   useEffect(() => {
@@ -75,17 +74,30 @@ const GuessNote: React.FC<Props> = ({ onBack, settings }) => {
 
   return (
     <div>
-      <h1>Guess the Note</h1>
-      <button onClick={onBack}>Back</button>
-      <h2>Score: {score}</h2>
-      <h2>Time Left: {timeLeft}</h2>
+      <header>
+        <h1>Guess the Note</h1>
+      </header>
+
+      <div className="scoreboard">
+        <span>Score: {score}</span>
+        <span>Time Left: {timeLeft}s</span>
+      </div>
+
       {feedback && (
-        <div style={{color: feedback.type === 'correct' ? 'green' : 'red',}}>
-            {feedback.msg}
+        <div className={`feedback ${feedback.type}`}>
+          {feedback.msg}
         </div>
       )}
-      {currentNote && <img src={currentNote.urlCloud} alt={currentNote.name} />}
-      <Piano keyPress={handleKeyPress}></Piano>
+
+      {currentNote && (
+        <img src={currentNote.urlCloud} alt={currentNote.name} className="note-image" />
+      )}
+
+      <Piano keyPress={handleKeyPress} />
+
+      <div className="button-container">
+        <button className="button secondary" onClick={onBack}>Back</button>
+      </div>
     </div>
   );
 };

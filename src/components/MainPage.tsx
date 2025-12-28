@@ -31,13 +31,23 @@ function MainPage() {
 
     return (
         <div>
-            <h1>Welcome to Note Trainer</h1>
-            <h2>Learn piano notes like a professional!</h2>
-            <h3>Choose an option:</h3>
+            <header>
+                <h1>Welcome to Note Trainer</h1>
+                <h2>Learn piano notes like a professional!</h2>
+                <h3>Choose an option:</h3>
+            </header>
 
-            <button className="button" onClick={() => setIsGuessNote(true)}>Guess note game</button>
-            <button className="button" onClick={() => setIsRecognizeBySound(true)}>Recognize by sound</button>
-            <button className="button" onClick={() => setIsSetting(true)}>Settings</button>
+            <div className="button-container">
+                <button className="button primary" onClick={() => setIsGuessNote(true)}>
+                    Guess note game
+                </button>
+                <button className="button primary" onClick={() => setIsRecognizeBySound(true)}>
+                    Recognize by sound
+                </button>
+                <button className="button secondary" onClick={() => setIsSetting(true)}>
+                    Settings
+                </button>
+            </div>
         </div>
     );
 }

@@ -8,11 +8,14 @@ type Props = WithBackButton & {
 function Settings({ onBack, settings, setSettings }: Props) {
     return (
         <div>
-            <h1>Settings</h1>
-            <div>
+            <header>
+                <h1>Settings</h1>
+            </header>
+
+            <div className="settings-section">
                 <h3>Type of notes shown in game:</h3>
                 {['treble', 'bass', 'both'].map((opt) => (
-                    <label key={opt}>
+                    <label key={opt} className="radio-label">
                         <input
                             type="radio"
                             name="noteOption"
@@ -24,9 +27,9 @@ function Settings({ onBack, settings, setSettings }: Props) {
                 ))}
             </div>
 
-            <div>
+            <div className="settings-section">
                 <h3>Include flats?</h3>
-                <label>
+                <label className="radio-label">
                     <input
                         type="radio"
                         name="flats"
@@ -35,7 +38,7 @@ function Settings({ onBack, settings, setSettings }: Props) {
                     />
                     Yes
                 </label>
-                <label>
+                <label className="radio-label">
                     <input
                         type="radio"
                         name="flats"
@@ -46,9 +49,9 @@ function Settings({ onBack, settings, setSettings }: Props) {
                 </label>
             </div>
 
-            <div>
+            <div className="settings-section">
                 <h3>Include sharps?</h3>
-                <label>
+                <label className="radio-label">
                     <input
                         type="radio"
                         name="sharps"
@@ -57,7 +60,7 @@ function Settings({ onBack, settings, setSettings }: Props) {
                     />
                     Yes
                 </label>
-                <label>
+                <label className="radio-label">
                     <input
                         type="radio"
                         name="sharps"
@@ -68,10 +71,10 @@ function Settings({ onBack, settings, setSettings }: Props) {
                 </label>
             </div>
 
-            <div>
+            <div className="settings-section">
                 <h3>Choose time per game:</h3>
                 {[60, 300, 600].map((t) => (
-                    <label key={t}>
+                    <label key={t} className="radio-label">
                         <input
                             type="radio"
                             name="time"
@@ -83,7 +86,9 @@ function Settings({ onBack, settings, setSettings }: Props) {
                 ))}
             </div>
 
-            <button onClick={onBack}>Back to main page</button>
+            <div className="button-container">
+                <button className="button secondary" onClick={onBack}>Back to main page</button>
+            </div>
         </div>
     );
 }
