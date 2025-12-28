@@ -89,13 +89,14 @@ I love playing the piano, so I thought of creating an app to help others start l
 **Piano-Trainer** is designed to make learning musical notes and chords fun and interactive.  
 The app currently includes features such as:  
 
-- **Guess the Note** – click the correct note on the interactive piano keyboard.  
-- **Instant feedback** – shows whether your answer was correct or wrong.  
-- **Scoring system** – points increase for correct answers.  
-- **Countdown timer** – challenge yourself before time runs out.  
+- **Guess the Note** – click the correct note on the interactive piano keyboard.
+- **Recognize by Sound** – listen to a note and select the correct key on the piano.
+- **Instant feedback** – shows whether your answer was correct or wrong.
+- **Scoring system** – points increase for correct answers.
+- **Countdown timer** – challenge yourself before time runs out (configurable in settings).
 - **Custom note designs** – all musical notes were designed in Figma to provide a clear and visually appealing interface.
-
-> ⚠️ **Work in progress:** The project is still under development, and more games, lessons, and features will be added soon.
+- **Audio support** – all notes have their corresponding audio clips hosted on Cloudinary for realistic sound playback.
+- ⚠️ **Work in progress:** The project is still under development, and more games, lessons, and features will be added soon.
 
 ---
 
