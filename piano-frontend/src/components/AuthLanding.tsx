@@ -17,31 +17,18 @@ function AuthLanding({ onAuthSuccess }: Props) {
       </header>
 
       {!mode && (
-        <div className="button-container">
-          <button className="button primary" onClick={() => setMode("register")}>
-            Register
-          </button>
-          <button className="button secondary" onClick={() => setMode("login")}>
-            Login
-          </button>
+        <div>
+          <button onClick={() => setMode("register")}>Register</button>
+          <button onClick={() => setMode("login")}>Login</button>
         </div>
       )}
 
-      {mode === "register" && (
-        <RegisterForm />
-      )}
+      {mode === "register" && <RegisterForm onAuthSuccess={onAuthSuccess} />}
+      {mode === "login" && <LoginForm onAuthSuccess={onAuthSuccess} />}
 
-      {mode === "login" && (
-        <LoginForm />
+      {(mode === "login" || mode === "register") && (
+        <button onClick={() => setMode(null)}>Back</button>
       )}
-
-      <div style={{ marginTop: "20px" }}>
-        {(mode === "login" || mode === "register") && (
-          <button className="button secondary" onClick={() => setMode(null)}>
-            Back
-          </button>
-        )}
-      </div>
     </div>
   );
 }
