@@ -30,8 +30,8 @@ function LoginForm({ onAuthSuccess }: Props) {
       }
 
       if (data.token) {
-        localStorage.setItem("token", data.token); // שמירת ה-token
-        onAuthSuccess(); // מודיע ל-App שהמשתמש מחובר
+        localStorage.setItem("token", data.token);
+        onAuthSuccess(); 
       } else {
         setError("Something went wrong");
       }
